@@ -38,9 +38,10 @@ Privatization view test
 *** Keywords ***
 
 Prepare environment
-    ${chromeOptions}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${chromeOptions}    add_argument    --headless
-    Create Webdriver  Chrome  chrome_options=${chromeOptions}
+#    ${chromeOptions}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+#    Call Method    ${chromeOptions}    add_argument    --headless
+    Open Browser  ${host}  Chrome
+#    Create Webdriver  Chrome  chrome_options=${chromeOptions}
     Set Window Size  1024  10000
     Go To  ${host}
     Click Element	xpath=//*[@id="menu-item-1136"]/descendant::a[@href="#"]

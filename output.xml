@@ -1,0 +1,2373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.6.6 on win32)" generated="20200427 16:36:11.744" rpa="false">
+<suite id="s1" name="Neb Test" source="D:\Documentos\Guseshka\Академия\Testing\Удаленная работа uStudio\Robot Framework\robot_tests.view_neb.org.ua\neb_test.robot">
+<test id="s1-t1" name="Auctions view test">
+<kw name="Prepare environment">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${host}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200427 16:36:11.941" level="INFO">Opening browser 'Chrome' to base url 'http://neb.org.ua'.</msg>
+<status status="PASS" starttime="20200427 16:36:11.941" endtime="20200427 16:36:15.953"></status>
+</kw>
+<kw name="Set Window Size" library="Selenium2Library">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1024</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:15.953" endtime="20200427 16:36:16.072"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:16.072" level="INFO">Opening url 'http://neb.org.ua'</msg>
+<status status="PASS" starttime="20200427 16:36:16.072" endtime="20200427 16:36:18.518"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="menu-item-1136"]/descendant::a[@href="#"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:18.519" level="INFO">Clicking element 'xpath=//*[@id="menu-item-1136"]/descendant::a[@href="#"]'.</msg>
+<status status="PASS" starttime="20200427 16:36:18.518" endtime="20200427 16:36:18.622"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//*[@id="menu-item-1261"]/descendant::a[@href="https://neb.org.ua/tenders/index"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:18.623" endtime="20200427 16:36:18.650"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:18.650" endtime="20200427 16:36:18.656"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:18.669" level="INFO">${elem_vert_pos} = 104</msg>
+<status status="PASS" starttime="20200427 16:36:18.656" endtime="20200427 16:36:18.669"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:18.682" level="INFO">${elem_gor_pos} = 441</msg>
+<status status="PASS" starttime="20200427 16:36:18.670" endtime="20200427 16:36:18.682"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:18.683" level="INFO">Executing JavaScript:
+window.scrollTo(0,-196);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:18.682" endtime="20200427 16:36:18.686"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:18.650" endtime="20200427 16:36:18.687"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:18.687" level="INFO">Clicking element 'xpath=//*[@id="menu-item-1261"]/descendant::a[@href="https://neb.org.ua/tenders/index"]'.</msg>
+<status status="PASS" starttime="20200427 16:36:18.687" endtime="20200427 16:36:19.731"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:18.623" endtime="20200427 16:36:19.731"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//input[@id="attribute-input"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//input[@id="attribute-input"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:19.756" level="INFO">Element 'xpath=//input[@id="attribute-input"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:19.732" endtime="20200427 16:36:19.756"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:19.731" endtime="20200427 16:36:19.756"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:11.940" endtime="20200427 16:36:19.757"></status>
+</kw>
+<kw name="Test tubs auctions">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:36:19.757" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:36:19.757" endtime="20200427 16:36:20.012"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//a[@class="dropdown-toggle"])[2]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:20.012" level="INFO">Clicking element 'xpath=(//a[@class="dropdown-toggle"])[2]'.</msg>
+<status status="PASS" starttime="20200427 16:36:20.012" endtime="20200427 16:36:20.080"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//ul[@id="w3"]/descendant::*[contains(@href,"http://neb.org.ua/tenders/")]</arg>
+</arguments>
+<assign>
+<var>${type_index}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.097" level="INFO">${type_index} = 4</msg>
+<status status="PASS" starttime="20200427 16:36:20.081" endtime="20200427 16:36:20.097"></status>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<doc>Converts the given item to an integer number.</doc>
+<arguments>
+<arg>${type_index}</arg>
+</arguments>
+<assign>
+<var>${type_index}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.098" level="INFO">${type_index} = 4</msg>
+<status status="PASS" starttime="20200427 16:36:20.097" endtime="20200427 16:36:20.098"></status>
+</kw>
+<kw name="${t_index} IN RANGE [ ${type_index} ]" type="for">
+<kw name="${t_index} = 0" type="foritem">
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//ul[@id="w3"]/descendant::*[contains(@href,"http://neb.org.ua/tenders/")][${t_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:20.098" endtime="20200427 16:36:20.119"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:20.119" endtime="20200427 16:36:20.127"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.141" level="INFO">${elem_vert_pos} = 130</msg>
+<status status="PASS" starttime="20200427 16:36:20.127" endtime="20200427 16:36:20.141"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.152" level="INFO">${elem_gor_pos} = 347</msg>
+<status status="PASS" starttime="20200427 16:36:20.142" endtime="20200427 16:36:20.152"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:20.153" level="INFO">Executing JavaScript:
+window.scrollTo(0,-170);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:20.152" endtime="20200427 16:36:20.157"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:20.119" endtime="20200427 16:36:20.157"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:20.157" level="INFO">Clicking element 'xpath=//ul[@id="w3"]/descendant::*[contains(@href,"http://neb.org.ua/tenders/")][1]'.</msg>
+<status status="PASS" starttime="20200427 16:36:20.157" endtime="20200427 16:36:20.473"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:20.098" endtime="20200427 16:36:20.473"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=(//div[@class="search-result_t"])[1]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=(//div[@class="search-result_t"])[1]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:20.495" level="INFO">Element 'xpath=(//div[@class="search-result_t"])[1]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:20.473" endtime="20200427 16:36:20.495"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:20.473" endtime="20200427 16:36:20.495"></status>
+</kw>
+<kw name="Test auction view">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:36:20.495" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:36:20.495" endtime="20200427 16:36:20.724"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@class="mk-btn mk-btn_default"]</arg>
+</arguments>
+<assign>
+<var>${auction_index}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.736" level="INFO">${auction_index} = 10</msg>
+<status status="PASS" starttime="20200427 16:36:20.724" endtime="20200427 16:36:20.736"></status>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<doc>Converts the given item to an integer number.</doc>
+<arguments>
+<arg>${auction_index}</arg>
+</arguments>
+<assign>
+<var>${auction_index}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.737" level="INFO">${auction_index} = 10</msg>
+<status status="PASS" starttime="20200427 16:36:20.736" endtime="20200427 16:36:20.737"></status>
+</kw>
+<kw name="${a_index} IN RANGE [ ${auction_index} ]" type="for">
+<kw name="${a_index} = 0" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:20.737" endtime="20200427 16:36:20.747"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.762" level="INFO">${elem_vert_pos} = 460</msg>
+<status status="PASS" starttime="20200427 16:36:20.747" endtime="20200427 16:36:20.762"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.782" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:36:20.763" endtime="20200427 16:36:20.782"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:20.783" level="INFO">Executing JavaScript:
+window.scrollTo(0,160);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:20.782" endtime="20200427 16:36:20.788"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:20.737" endtime="20200427 16:36:20.788"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:20.788" endtime="20200427 16:36:20.806"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:20.806" endtime="20200427 16:36:20.813"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.824" level="INFO">${elem_vert_pos} = 460</msg>
+<status status="PASS" starttime="20200427 16:36:20.814" endtime="20200427 16:36:20.824"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:20.835" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:36:20.824" endtime="20200427 16:36:20.835"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:20.836" level="INFO">Executing JavaScript:
+window.scrollTo(0,160);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:20.835" endtime="20200427 16:36:20.839"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:20.806" endtime="20200427 16:36:20.839"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:20.839" level="INFO">Clicking element 'xpath=(//a[@class="mk-btn mk-btn_default"])[1]'.</msg>
+<status status="PASS" starttime="20200427 16:36:20.839" endtime="20200427 16:36:22.531"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:20.788" endtime="20200427 16:36:22.531"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:22.553" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.questions"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:22.531" endtime="20200427 16:36:22.553"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:22.531" endtime="20200427 16:36:22.553"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Run Keywords</arg>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:22.554" endtime="20200427 16:36:22.569"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:22.570" endtime="20200427 16:36:22.576"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:22.589" level="INFO">${elem_vert_pos} = 191</msg>
+<status status="PASS" starttime="20200427 16:36:22.577" endtime="20200427 16:36:22.589"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:22.601" level="INFO">${elem_gor_pos} = 736</msg>
+<status status="PASS" starttime="20200427 16:36:22.589" endtime="20200427 16:36:22.601"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:22.602" level="INFO">Executing JavaScript:
+window.scrollTo(0,-109);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:22.601" endtime="20200427 16:36:22.606"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:22.570" endtime="20200427 16:36:22.606"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:22.606" level="INFO">Clicking element 'xpath=//a[@data-test-id="sidebar.questions"]'.</msg>
+<status status="PASS" starttime="20200427 16:36:22.606" endtime="20200427 16:36:22.985"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:22.554" endtime="20200427 16:36:22.985"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:23.009" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.info"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:22.986" endtime="20200427 16:36:23.009"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:22.986" endtime="20200427 16:36:23.009"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:22.554" endtime="20200427 16:36:23.009"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:22.554" endtime="20200427 16:36:23.009"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:36:23.009" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:36:23.009" endtime="20200427 16:36:23.248"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:20.737" endtime="20200427 16:36:23.249"></status>
+</kw>
+<kw name="${a_index} = 1" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:23.249" endtime="20200427 16:36:24.344"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:24.372" level="INFO">${elem_vert_pos} = 720</msg>
+<status status="PASS" starttime="20200427 16:36:24.344" endtime="20200427 16:36:24.372"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:24.387" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:36:24.372" endtime="20200427 16:36:24.387"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:24.388" level="INFO">Executing JavaScript:
+window.scrollTo(0,420);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:24.387" endtime="20200427 16:36:24.394"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:23.249" endtime="20200427 16:36:24.394"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:24.394" endtime="20200427 16:36:24.411"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:24.412" endtime="20200427 16:36:24.419"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:24.432" level="INFO">${elem_vert_pos} = 720</msg>
+<status status="PASS" starttime="20200427 16:36:24.419" endtime="20200427 16:36:24.432"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:24.444" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:36:24.432" endtime="20200427 16:36:24.444"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:24.445" level="INFO">Executing JavaScript:
+window.scrollTo(0,420);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:24.444" endtime="20200427 16:36:24.449"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:24.411" endtime="20200427 16:36:24.449"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:24.449" level="INFO">Clicking element 'xpath=(//a[@class="mk-btn mk-btn_default"])[2]'.</msg>
+<status status="PASS" starttime="20200427 16:36:24.449" endtime="20200427 16:36:30.888"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:24.394" endtime="20200427 16:36:30.888"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:30.912" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.questions"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:30.888" endtime="20200427 16:36:30.912"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:30.888" endtime="20200427 16:36:30.912"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Run Keywords</arg>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:30.913" endtime="20200427 16:36:30.929"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:30.930" endtime="20200427 16:36:30.936"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:30.953" level="INFO">${elem_vert_pos} = 191</msg>
+<status status="PASS" starttime="20200427 16:36:30.937" endtime="20200427 16:36:30.953"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:30.967" level="INFO">${elem_gor_pos} = 736</msg>
+<status status="PASS" starttime="20200427 16:36:30.953" endtime="20200427 16:36:30.967"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:30.968" level="INFO">Executing JavaScript:
+window.scrollTo(0,-109);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:30.967" endtime="20200427 16:36:30.974"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:30.929" endtime="20200427 16:36:30.974"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:30.975" level="INFO">Clicking element 'xpath=//a[@data-test-id="sidebar.questions"]'.</msg>
+<status status="PASS" starttime="20200427 16:36:30.974" endtime="20200427 16:36:36.341"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:30.913" endtime="20200427 16:36:36.341"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:36.371" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.info"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:36.342" endtime="20200427 16:36:36.373"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:36.342" endtime="20200427 16:36:36.373"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:30.913" endtime="20200427 16:36:36.373"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:30.912" endtime="20200427 16:36:36.373"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:36:36.373" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:36:36.373" endtime="20200427 16:36:36.607"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:23.249" endtime="20200427 16:36:36.607"></status>
+</kw>
+<kw name="${a_index} = 2" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:36.608" endtime="20200427 16:36:37.243"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:37.305" level="INFO">${elem_vert_pos} = 986</msg>
+<status status="PASS" starttime="20200427 16:36:37.243" endtime="20200427 16:36:37.305"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:37.327" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:36:37.305" endtime="20200427 16:36:37.327"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:37.328" level="INFO">Executing JavaScript:
+window.scrollTo(0,686);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:37.327" endtime="20200427 16:36:37.335"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:36.607" endtime="20200427 16:36:37.335"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:37.335" endtime="20200427 16:36:37.353"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:37.354" endtime="20200427 16:36:37.361"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:37.373" level="INFO">${elem_vert_pos} = 978</msg>
+<status status="PASS" starttime="20200427 16:36:37.361" endtime="20200427 16:36:37.373"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:37.385" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:36:37.373" endtime="20200427 16:36:37.385"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:37.387" level="INFO">Executing JavaScript:
+window.scrollTo(0,678);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:37.386" endtime="20200427 16:36:37.404"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:37.354" endtime="20200427 16:36:37.404"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:37.404" level="INFO">Clicking element 'xpath=(//a[@class="mk-btn mk-btn_default"])[3]'.</msg>
+<status status="PASS" starttime="20200427 16:36:37.404" endtime="20200427 16:36:43.296"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:37.335" endtime="20200427 16:36:43.296"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:43.319" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.questions"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:43.297" endtime="20200427 16:36:43.319"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:43.297" endtime="20200427 16:36:43.319"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Run Keywords</arg>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:43.320" endtime="20200427 16:36:43.337"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:43.338" endtime="20200427 16:36:43.344"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:43.360" level="INFO">${elem_vert_pos} = 191</msg>
+<status status="PASS" starttime="20200427 16:36:43.344" endtime="20200427 16:36:43.360"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:43.371" level="INFO">${elem_gor_pos} = 736</msg>
+<status status="PASS" starttime="20200427 16:36:43.360" endtime="20200427 16:36:43.371"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:43.372" level="INFO">Executing JavaScript:
+window.scrollTo(0,-109);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:43.371" endtime="20200427 16:36:43.377"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:43.337" endtime="20200427 16:36:43.377"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:43.377" level="INFO">Clicking element 'xpath=//a[@data-test-id="sidebar.questions"]'.</msg>
+<status status="PASS" starttime="20200427 16:36:43.377" endtime="20200427 16:36:48.672"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:43.320" endtime="20200427 16:36:48.673"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:48.700" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.info"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:48.673" endtime="20200427 16:36:48.700"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:48.673" endtime="20200427 16:36:48.700"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:43.320" endtime="20200427 16:36:48.700"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:43.319" endtime="20200427 16:36:48.700"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:36:48.700" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:36:48.700" endtime="20200427 16:36:48.903"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:36.607" endtime="20200427 16:36:48.903"></status>
+</kw>
+<kw name="${a_index} = 3" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:48.904" endtime="20200427 16:36:49.354"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:49.381" level="INFO">${elem_vert_pos} = 1263</msg>
+<status status="PASS" starttime="20200427 16:36:49.355" endtime="20200427 16:36:49.381"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:49.393" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:36:49.381" endtime="20200427 16:36:49.393"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:49.394" level="INFO">Executing JavaScript:
+window.scrollTo(0,963);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:49.393" endtime="20200427 16:36:49.399"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:48.903" endtime="20200427 16:36:49.399"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:49.400" endtime="20200427 16:36:49.417"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:49.417" endtime="20200427 16:36:49.424"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:49.438" level="INFO">${elem_vert_pos} = 1263</msg>
+<status status="PASS" starttime="20200427 16:36:49.424" endtime="20200427 16:36:49.438"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:49.451" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:36:49.438" endtime="20200427 16:36:49.451"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:49.452" level="INFO">Executing JavaScript:
+window.scrollTo(0,963);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:49.451" endtime="20200427 16:36:49.455"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:49.417" endtime="20200427 16:36:49.455"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:49.456" level="INFO">Clicking element 'xpath=(//a[@class="mk-btn mk-btn_default"])[4]'.</msg>
+<status status="PASS" starttime="20200427 16:36:49.456" endtime="20200427 16:36:54.811"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:49.399" endtime="20200427 16:36:54.811"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<msg timestamp="20200427 16:36:54.832" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.questions"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:36:54.811" endtime="20200427 16:36:54.832"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:54.811" endtime="20200427 16:36:54.832"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Run Keywords</arg>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:54.833" endtime="20200427 16:36:54.853"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:36:54.853" endtime="20200427 16:36:54.860"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:54.872" level="INFO">${elem_vert_pos} = 191</msg>
+<status status="PASS" starttime="20200427 16:36:54.860" endtime="20200427 16:36:54.872"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:36:54.884" level="INFO">${elem_gor_pos} = 736</msg>
+<status status="PASS" starttime="20200427 16:36:54.872" endtime="20200427 16:36:54.884"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:36:54.885" level="INFO">Executing JavaScript:
+window.scrollTo(0,-109);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:36:54.884" endtime="20200427 16:36:54.889"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:54.853" endtime="20200427 16:36:54.889"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:36:54.890" level="INFO">Clicking element 'xpath=//a[@data-test-id="sidebar.questions"]'.</msg>
+<status status="PASS" starttime="20200427 16:36:54.889" endtime="20200427 16:37:00.236"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:54.833" endtime="20200427 16:37:00.237"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:00.256" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.info"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:00.237" endtime="20200427 16:37:00.256"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:00.237" endtime="20200427 16:37:00.256"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:54.833" endtime="20200427 16:37:00.256"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:54.832" endtime="20200427 16:37:00.256"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:37:00.256" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:37:00.256" endtime="20200427 16:37:00.472"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:36:48.903" endtime="20200427 16:37:00.472"></status>
+</kw>
+<kw name="${a_index} = 4" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:00.473" endtime="20200427 16:37:01.333"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:01.391" level="INFO">${elem_vert_pos} = 1562</msg>
+<status status="PASS" starttime="20200427 16:37:01.333" endtime="20200427 16:37:01.391"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:01.404" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:37:01.391" endtime="20200427 16:37:01.404"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:01.405" level="INFO">Executing JavaScript:
+window.scrollTo(0,1262);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:01.404" endtime="20200427 16:37:01.411"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:00.472" endtime="20200427 16:37:01.411"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:01.411" endtime="20200427 16:37:01.428"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:01.429" endtime="20200427 16:37:01.436"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:01.450" level="INFO">${elem_vert_pos} = 1545</msg>
+<status status="PASS" starttime="20200427 16:37:01.436" endtime="20200427 16:37:01.450"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:01.464" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:37:01.450" endtime="20200427 16:37:01.464"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:01.465" level="INFO">Executing JavaScript:
+window.scrollTo(0,1245);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:01.464" endtime="20200427 16:37:01.470"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:01.428" endtime="20200427 16:37:01.470"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:37:01.470" level="INFO">Clicking element 'xpath=(//a[@class="mk-btn mk-btn_default"])[5]'.</msg>
+<status status="PASS" starttime="20200427 16:37:01.470" endtime="20200427 16:37:07.929"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:01.411" endtime="20200427 16:37:07.929"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:07.949" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.questions"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:07.929" endtime="20200427 16:37:07.949"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:07.929" endtime="20200427 16:37:07.949"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Run Keywords</arg>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:07.950" endtime="20200427 16:37:07.965"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:07.966" endtime="20200427 16:37:07.972"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:07.985" level="INFO">${elem_vert_pos} = 191</msg>
+<status status="PASS" starttime="20200427 16:37:07.972" endtime="20200427 16:37:07.986"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:07.998" level="INFO">${elem_gor_pos} = 736</msg>
+<status status="PASS" starttime="20200427 16:37:07.986" endtime="20200427 16:37:07.998"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:07.999" level="INFO">Executing JavaScript:
+window.scrollTo(0,-109);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:07.998" endtime="20200427 16:37:08.003"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:07.965" endtime="20200427 16:37:08.003"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:37:08.004" level="INFO">Clicking element 'xpath=//a[@data-test-id="sidebar.questions"]'.</msg>
+<status status="PASS" starttime="20200427 16:37:08.003" endtime="20200427 16:37:13.313"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:07.950" endtime="20200427 16:37:13.313"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:13.333" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.info"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:13.314" endtime="20200427 16:37:13.333"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:13.313" endtime="20200427 16:37:13.333"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:07.950" endtime="20200427 16:37:13.334"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:07.949" endtime="20200427 16:37:13.334"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:37:13.334" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:37:13.334" endtime="20200427 16:37:13.539"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:00.472" endtime="20200427 16:37:13.539"></status>
+</kw>
+<kw name="${a_index} = 5" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:13.540" endtime="20200427 16:37:14.192"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:14.217" level="INFO">${elem_vert_pos} = 1879</msg>
+<status status="PASS" starttime="20200427 16:37:14.192" endtime="20200427 16:37:14.217"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:14.230" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:37:14.217" endtime="20200427 16:37:14.230"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:14.231" level="INFO">Executing JavaScript:
+window.scrollTo(0,1579);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:14.230" endtime="20200427 16:37:14.235"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:13.540" endtime="20200427 16:37:14.235"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:14.236" endtime="20200427 16:37:14.252"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:14.253" endtime="20200427 16:37:14.260"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:14.271" level="INFO">${elem_vert_pos} = 1879</msg>
+<status status="PASS" starttime="20200427 16:37:14.260" endtime="20200427 16:37:14.271"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:14.283" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:37:14.272" endtime="20200427 16:37:14.283"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:14.284" level="INFO">Executing JavaScript:
+window.scrollTo(0,1579);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:14.283" endtime="20200427 16:37:14.288"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:14.252" endtime="20200427 16:37:14.288"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:37:14.288" level="INFO">Clicking element 'xpath=(//a[@class="mk-btn mk-btn_default"])[6]'.</msg>
+<status status="PASS" starttime="20200427 16:37:14.288" endtime="20200427 16:37:20.635"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:14.235" endtime="20200427 16:37:20.635"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:20.656" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.questions"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:20.635" endtime="20200427 16:37:20.656"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:20.635" endtime="20200427 16:37:20.656"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Run Keywords</arg>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:20.657" endtime="20200427 16:37:20.673"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:20.673" endtime="20200427 16:37:20.680"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:20.694" level="INFO">${elem_vert_pos} = 191</msg>
+<status status="PASS" starttime="20200427 16:37:20.680" endtime="20200427 16:37:20.694"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:20.708" level="INFO">${elem_gor_pos} = 736</msg>
+<status status="PASS" starttime="20200427 16:37:20.695" endtime="20200427 16:37:20.708"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:20.709" level="INFO">Executing JavaScript:
+window.scrollTo(0,-109);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:20.708" endtime="20200427 16:37:20.716"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:20.673" endtime="20200427 16:37:20.716"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:37:20.716" level="INFO">Clicking element 'xpath=//a[@data-test-id="sidebar.questions"]'.</msg>
+<status status="PASS" starttime="20200427 16:37:20.716" endtime="20200427 16:37:25.988"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:20.657" endtime="20200427 16:37:25.988"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:26.011" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.info"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:25.989" endtime="20200427 16:37:26.011"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:25.989" endtime="20200427 16:37:26.011"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:20.657" endtime="20200427 16:37:26.011"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:20.656" endtime="20200427 16:37:26.011"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:37:26.012" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:37:26.011" endtime="20200427 16:37:26.243"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:13.540" endtime="20200427 16:37:26.243"></status>
+</kw>
+<kw name="${a_index} = 6" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:26.243" endtime="20200427 16:37:27.357"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:27.483" level="INFO">${elem_vert_pos} = 2192</msg>
+<status status="PASS" starttime="20200427 16:37:27.357" endtime="20200427 16:37:27.483"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:27.500" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:37:27.484" endtime="20200427 16:37:27.500"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:27.502" level="INFO">Executing JavaScript:
+window.scrollTo(0,1892);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:27.500" endtime="20200427 16:37:27.509"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:26.243" endtime="20200427 16:37:27.509"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:27.510" endtime="20200427 16:37:27.527"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:27.527" endtime="20200427 16:37:27.534"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:27.546" level="INFO">${elem_vert_pos} = 2166</msg>
+<status status="PASS" starttime="20200427 16:37:27.534" endtime="20200427 16:37:27.546"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:27.556" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:37:27.546" endtime="20200427 16:37:27.556"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:27.557" level="INFO">Executing JavaScript:
+window.scrollTo(0,1866);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:27.557" endtime="20200427 16:37:27.562"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:27.527" endtime="20200427 16:37:27.562"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:37:27.562" level="INFO">Clicking element 'xpath=(//a[@class="mk-btn mk-btn_default"])[7]'.</msg>
+<status status="PASS" starttime="20200427 16:37:27.562" endtime="20200427 16:37:34.552"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:27.509" endtime="20200427 16:37:34.552"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:34.569" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.questions"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:34.553" endtime="20200427 16:37:34.569"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:34.553" endtime="20200427 16:37:34.569"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Run Keywords</arg>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:34.571" endtime="20200427 16:37:34.586"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:34.588" endtime="20200427 16:37:34.595"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:34.608" level="INFO">${elem_vert_pos} = 191</msg>
+<status status="PASS" starttime="20200427 16:37:34.595" endtime="20200427 16:37:34.608"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:34.620" level="INFO">${elem_gor_pos} = 736</msg>
+<status status="PASS" starttime="20200427 16:37:34.608" endtime="20200427 16:37:34.620"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:34.621" level="INFO">Executing JavaScript:
+window.scrollTo(0,-109);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:34.620" endtime="20200427 16:37:34.626"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:34.588" endtime="20200427 16:37:34.626"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:37:34.626" level="INFO">Clicking element 'xpath=//a[@data-test-id="sidebar.questions"]'.</msg>
+<status status="PASS" starttime="20200427 16:37:34.626" endtime="20200427 16:37:39.932"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:34.570" endtime="20200427 16:37:39.932"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:39.958" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.info"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:39.932" endtime="20200427 16:37:39.958"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:39.932" endtime="20200427 16:37:39.958"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:34.570" endtime="20200427 16:37:39.958"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:34.570" endtime="20200427 16:37:39.958"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:37:39.958" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:37:39.958" endtime="20200427 16:37:40.168"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:26.243" endtime="20200427 16:37:40.168"></status>
+</kw>
+<kw name="${a_index} = 7" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:40.168" endtime="20200427 16:37:41.222"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:41.250" level="INFO">${elem_vert_pos} = 2451</msg>
+<status status="PASS" starttime="20200427 16:37:41.222" endtime="20200427 16:37:41.251"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:41.263" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:37:41.251" endtime="20200427 16:37:41.263"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:41.264" level="INFO">Executing JavaScript:
+window.scrollTo(0,2151);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:41.263" endtime="20200427 16:37:41.271"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:40.168" endtime="20200427 16:37:41.271"></status>
+</kw>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:41.272" endtime="20200427 16:37:41.291"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:41.291" endtime="20200427 16:37:41.298"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:41.311" level="INFO">${elem_vert_pos} = 2451</msg>
+<status status="PASS" starttime="20200427 16:37:41.298" endtime="20200427 16:37:41.311"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:41.325" level="INFO">${elem_gor_pos} = 785</msg>
+<status status="PASS" starttime="20200427 16:37:41.311" endtime="20200427 16:37:41.325"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:41.326" level="INFO">Executing JavaScript:
+window.scrollTo(0,2151);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:41.325" endtime="20200427 16:37:41.330"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:41.291" endtime="20200427 16:37:41.330"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:37:41.330" level="INFO">Clicking element 'xpath=(//a[@class="mk-btn mk-btn_default"])[8]'.</msg>
+<status status="PASS" starttime="20200427 16:37:41.330" endtime="20200427 16:37:48.349"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:41.271" endtime="20200427 16:37:48.349"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:48.372" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.questions"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:48.350" endtime="20200427 16:37:48.372"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:48.349" endtime="20200427 16:37:48.372"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 x</arg>
+<arg>1 s</arg>
+<arg>Run Keywords</arg>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait and Click</arg>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+<arg>AND</arg>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Wait and Click">
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.questions"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:48.373" endtime="20200427 16:37:48.387"></status>
+</kw>
+<kw name="Scroll To Element">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:48.388" endtime="20200427 16:37:48.395"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:48.409" level="INFO">${elem_vert_pos} = 191</msg>
+<status status="PASS" starttime="20200427 16:37:48.395" endtime="20200427 16:37:48.409"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_gor_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:48.422" level="INFO">${elem_gor_pos} = 736</msg>
+<status status="PASS" starttime="20200427 16:37:48.409" endtime="20200427 16:37:48.422"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,${elem_vert_pos - 300});</arg>
+</arguments>
+<msg timestamp="20200427 16:37:48.423" level="INFO">Executing JavaScript:
+window.scrollTo(0,-109);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200427 16:37:48.422" endtime="20200427 16:37:48.428"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:48.387" endtime="20200427 16:37:48.428"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200427 16:37:48.428" level="INFO">Clicking element 'xpath=//a[@data-test-id="sidebar.questions"]'.</msg>
+<status status="PASS" starttime="20200427 16:37:48.428" endtime="20200427 16:37:53.728"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:48.373" endtime="20200427 16:37:53.728"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 x</arg>
+<arg>1 s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[@data-test-id="sidebar.info"]</arg>
+</arguments>
+<msg timestamp="20200427 16:37:53.746" level="INFO">Element 'xpath=//a[@data-test-id="sidebar.info"]' is displayed.</msg>
+<status status="PASS" starttime="20200427 16:37:53.728" endtime="20200427 16:37:53.746"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:53.728" endtime="20200427 16:37:53.746"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:48.372" endtime="20200427 16:37:53.746"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:48.372" endtime="20200427 16:37:53.746"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${host}/tenders/index</arg>
+</arguments>
+<msg timestamp="20200427 16:37:53.747" level="INFO">Opening url 'http://neb.org.ua/tenders/index'</msg>
+<status status="PASS" starttime="20200427 16:37:53.747" endtime="20200427 16:37:53.939"></status>
+</kw>
+<status status="PASS" starttime="20200427 16:37:40.168" endtime="20200427 16:37:53.939"></status>
+</kw>
+<kw name="${a_index} = 8" type="foritem">
+<kw name="Scroll To Element">
+<arguments>
+<arg>xpath=(//a[@class="mk-btn mk-btn_default"])[${a_index + 1}]</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200427 16:37:53.939" endtime="20200427 16:37:54.376"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${elem_vert_pos}</var>
+</assign>
+<msg timestamp="20200427 16:37:54.406" level="INFO">${elem_vert_pos} = 2794</msg>
+<status status="PASS" starttime="20200427 16:37:54.377" endtime="20200427 16:37:54.406"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns the horizontal position of the element identified by ``locator``.
