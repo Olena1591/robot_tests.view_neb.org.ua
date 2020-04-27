@@ -39,7 +39,7 @@ Privatization view test
 
 Prepare environment
     ${chromeOptions}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-#    Call Method    ${chromeOptions}    add_argument    --headless
+    Call Method    ${chromeOptions}    add_argument    --headless
     Create Webdriver  Chrome  chrome_options=${chromeOptions}
     Set Window Size  1024  10000
     Go To  ${host}
